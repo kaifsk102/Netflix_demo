@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Logo from '/logo.png'
-import './login.css'
+import './Login.css'
 import { login, signup } from '../../firebase'
 
 
