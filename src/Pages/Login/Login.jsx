@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Logo from '/logo.png'
 import './Login.css'
 import { login, signup } from '../../firebase'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
@@ -10,6 +11,8 @@ const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const user_auth = async (event)=>{
     event.preventDefault();

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Home from './Pages/Home/Home'
-import { Routes , Route, useNavigate } from 'react-router-dom'
+import { Routes , Route, useNavigate, } from 'react-router-dom'
 import Login from './Pages/Login/Login'
 import Player from './Pages/Player/Player'
 import { onAuthStateChanged } from 'firebase/auth'
@@ -17,6 +17,7 @@ function App() {
     onAuthStateChanged(auth , async (user) => {
       if(user){
         console.log("Logged In");
+        navigate('/');
       } else{
         console.log("Logged Out");
         navigate('/login');
