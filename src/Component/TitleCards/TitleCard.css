@@ -8,12 +8,24 @@
         margin-bottom: 0;
     }
     .titlecard h2{
-        font-size: px;
+        font-size: 15px;
+    }
+    .card-list img{
+        width: 200px;
+    }
+    .card-list p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    
+    .titlecard h2{
+        font: size 15px; 
     }
     .card-list img{
         width: 150px;
     }
     .card-list p{
-        font-size: 12px;
+        font-size: 10px;
     }
 }

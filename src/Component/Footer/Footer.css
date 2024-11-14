@@ -1,0 +1,22 @@
+@media (max-width: 800px) {
+    .footer-icon a{
+        width: 10%;
+        font-size: 20px;
+    }
+    .footer ul{
+        grid-template-columns: auto auto;
+        font-size: 12px;
+        padding-left: 14%;
+    }
+    .footer h4{
+        font-size: 12px;
+        padding-left: 14%;
+    }
+    .footer .last {
+        font-size: 12px;
+    }
+    .footer p{
+        font-size: 10px;
+    }
+    
+}
