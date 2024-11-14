@@ -35,7 +35,7 @@ const Navbar = () => {
                 <li className=" itemslist cursor-pointer">Movies</li>
                 <li className=" itemslist cursor-pointer">New & Popular</li>
                 <li className=" itemslist cursor-pointer">My List</li>
-                <li className=" itemslist cursor-pointer">Browse by languages</li>   
+                <li className=" itemslist cursor-pointer">Browse by Languages</li>   
             </ul>
 
         </div>

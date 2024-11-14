@@ -3,6 +3,7 @@ import Logo from '/logo.png'
 import './Login.css'
 import { login, signup } from '../../firebase'
 import { useNavigate } from 'react-router-dom'
+import netflix_spinner from '/netflix_spinner.gif'
 
 
 const Login = () => {
@@ -11,20 +12,26 @@ const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const user_auth = async (event)=>{
     event.preventDefault();
+    setLoading(true);
     if(signState==="Sign In"){
       await login(email, password);
     } else {
       await signup(name, email, password );
     }
+    setLoading(false);
   }
 
   return (
 
+    loading?<div className='login-spinner w-full h-screen flex items-center justify-center '>
+      <img src={netflix_spinner}  alt="" className='w-28' />
+    </div>:
     <div className=' Login h-screen px-5  ' >
       <img src={Logo} alt="LoginLogo" className='w-40 py-10' />
       <div className='login-form w-full max-w-sm m-auto p-16 rounded '>

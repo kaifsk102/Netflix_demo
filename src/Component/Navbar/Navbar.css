@@ -3,9 +3,34 @@
     display: block ;
 }
 .nav-dark{
-    background: #141414;
+    background-color: #050505;
+    transition: background-color 0.5s ease;
 
 }
+@media (max-width: 800px) {
+    .Navbar{
+        padding: 20px 4%;
+        width: 100%;
+    }
+    .Navbar-Left ul{
+        display: none;
+    }
+    .Navbar img{
+        height: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .Navbar img{
+        height: 20px;
+    }
+    .Navbar-Right{
+        gap: 7px;
 
+    }
+    .Navbar{
+        width: 100%;
+        font-size: 12px;
+    }
+}
 
 

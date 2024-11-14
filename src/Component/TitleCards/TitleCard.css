@@ -2,3 +2,18 @@
     display: none;
 
 }
+@media (max-width: 800px) {
+    .titlecard{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .titlecard h2{
+        font-size: px;
+    }
+    .card-list img{
+        width: 150px;
+    }
+    .card-list p{
+        font-size: 12px;
+    }
+}
