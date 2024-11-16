@@ -4,6 +4,7 @@ import './Login.css'
 import { login, signup } from '../../firebase'
 import { useNavigate } from 'react-router-dom'
 import netflix_spinner from '/netflix_spinner.gif'
+import Footer from '../../Component/Footer/Footer'
 
 
 const Login = () => {
@@ -28,13 +29,14 @@ const Login = () => {
   }
 
   return (
+    
 
     loading?<div className='login-spinner w-full h-screen flex items-center justify-center '>
-      <img src={netflix_spinner}  alt="" className='w-28' />
+      <img src={netflix_spinner}  alt="" className='w-32' />
     </div>:
-    <div className=' Login h-screen px-5  ' >
-      <img src={Logo} alt="LoginLogo" className='w-40 py-10' />
-      <div className='login-form w-full max-w-sm m-auto p-16 rounded '>
+    <div className=' Login  px-5   ' >
+      <img src={Logo} alt="LoginLogo" className='w-32 py-12 ' />
+      <div className='login-form w-full max-w-sm  p-16 rounded '>
         <h1 className=' text-4xl font-bold mb-7'>{signState}</h1>
         <form  className=' space-y-6 w-full '>
 
@@ -65,7 +67,9 @@ const Login = () => {
 
         </div>
       </div>
+      <div className='footer mt-32'><Footer/></div>
     </div>
+   
   )
 }
 
