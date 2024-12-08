@@ -6,6 +6,7 @@ import profile from '/profile_img.png'
 import caret from '/caret_icon.svg'
 import './Navbar.css'
 import { logout } from '../../firebase'
+import SearchBox from '../SearchBox/SearchBox'
 
 
 
@@ -25,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div ref={navRef} className='Navbar z-10 flex justify-between w-full py-4 text-white fill-white bg-transparent  fixed  '>
-        <div className='Navbar-Left flex align-middle gap-12 '>
+        <div className='Navbar-Left flex align-middle gap-12 justify-between '>
             
             <img src={logo} alt=" logo" width='90px' className=' ' />
             
@@ -35,12 +36,14 @@ const Navbar = () => {
                 <li className=" itemslist cursor-pointer">Movies</li>
                 <li className=" itemslist cursor-pointer">New & Popular</li>
                 <li className=" itemslist cursor-pointer">My List</li>
-                <li className=" itemslist cursor-pointer">Browse by Languages</li>   
+                <li className=" itemslist cursor-pointer">Browse by Languages</li> 
+                  
             </ul>
 
         </div>
+        
         <div className=' Navbar-Right flex  gap-5'>
-        <img src={search} alt=""  className='icon align-middle'/> 
+        <SearchBox/>
         <p> Children</p>
         <img src={bell} alt="" className='icon align-middle' />
         <div className=' profile flex align-middle gap-2 cursor-pointer relative '  >
@@ -49,6 +52,8 @@ const Navbar = () => {
           <div className='dropdown absolute top-full right-0 w-max bg-gray-800 px-4 py-2 rounded-md underline  font-thin underline-offset-2 hidden ' > 
             <p onClick={()=>{logout()}} className='text-sm cursor-pointer' >SingOut of Netfilx </p>
           </div>
+          
+
         </div>
         </div>
         
